@@ -1,0 +1,17 @@
+<h1>TheCuriousRubyProgrammer</h1>
+
+<% @posts.each do |post| %>
+  <p>
+    <h2><%=link_to(post.title, post_path(post))%></h2>
+  </p>
+  <p>
+    <%=post.author%>
+  <p>
+  <p>
+    <%=post.created_at%>
+  </p>
+  <p>
+    <%=post.body%>
+  </p>
+<%end%>
+
