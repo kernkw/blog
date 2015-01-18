@@ -2,7 +2,7 @@ require 'rails_helper.rb'
 
 describe "Lists all the posts" do
   it "displays the title" do 
-    visit("http://example.com/posts")
+    visit posts_url
 
     expect(page).to have_text("TheCuriousRubyProgrammer")
   end
@@ -11,7 +11,7 @@ describe "Lists all the posts" do
 
     post2 = Post.create(post_attributes(title: "Post 2"))
 
-    visit("http://example.com/posts")
+    visit posts_url
 
     expect(page).to have_text(post1.title)
     expect(page).to have_text(post1.author)

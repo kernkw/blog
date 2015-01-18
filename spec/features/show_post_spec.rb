@@ -6,7 +6,7 @@ describe "Shows a post" do
                        author: "Kyle Kern", 
                        body: "My First blog post")
 
-    visit("http://example.com/posts/1")
+    visit post_url(post)
 
     expect(page).to have_text(post.title)
     expect(page).to have_text(post.author)
